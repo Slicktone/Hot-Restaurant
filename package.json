@@ -1,0 +1,23 @@
+{
+  "name": "hot-restuarant",
+  "version": "1.0.0",
+  "description": "Hot Restaurant to make tables",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Slicktone/Hot-Restaurant.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Slicktone/Hot-Restaurant/issues"
+  },
+  "homepage": "https://github.com/Slicktone/Hot-Restaurant#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0"
+  }
+}

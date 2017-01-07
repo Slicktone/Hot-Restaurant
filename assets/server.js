@@ -28,9 +28,10 @@ var reservation = [{
 // Routes
 
 
-app.post('/api/view.html', function (req, res) {
+app.post('/api/view', function (req, res) {
   var newnewreservation = req.body;
   console.log(newnewreservation);
+  
 });
 
 
