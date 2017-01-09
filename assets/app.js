@@ -15,6 +15,7 @@
 			customerID: $('#reserve_uniqueID').val().trim()
 		};
 
+
 		console.log(newReservation);
 
 		// This line is the magic. It's very similar to the standard ajax function we used.
@@ -150,3 +151,9 @@ return false;
 	// ==========================================
 	runTableQuery();
 	runWaitListQuery();
+
+module.export = newReservation; 
+
+
+
+

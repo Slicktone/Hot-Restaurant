@@ -4,6 +4,9 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var path = require("path");
 
+
+
+
 // Sets up the Express App
 // =============================================================
 var app = express();
@@ -17,12 +20,20 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
 
 // =============================================================
-var reservations = [{
+var reservation = [{
 
 
 }];
 
 // Routes
+
+
+app.post('/api/view.html', function (req, res) {
+  var newnewreservation = req.body;
+  console.log(newnewreservation);
+});
+
+
 
 
 
@@ -38,19 +49,19 @@ app.get("/add", function(req, res) {
 });
 
 app.get("/add", function(req, res) {
-  res.sendFile(path.join(__dirname, "all.html"));
+  res.sendFile(path.join(__dirname, "home.html"));
 });
 
-// Search for Specific Character (or all reservations) - provides JSON
-app.get("/api/:reservations?", function(req, res) {
-  var chosen = req.params.reservations;
+// Search for Specific Character (or all Reservation) - provides JSON
+app.get("/api/:Reservation?", function(req, res) {
+  var chosen = req.params.Reservation;
 
   if (chosen) {
     console.log(chosen);
 
-    for (var i = 0; i < reservations.length; i++) {
-      if (chosen === reservations[i].routeName) {
-        res.json(reservations[i]);
+    for (var i = 0; i < reservation.length; i++) {
+      if (chosen === reservation[i].routeName) {
+        res.json(reservation[i]);
         return;
       }
     }
@@ -58,7 +69,7 @@ app.get("/api/:reservations?", function(req, res) {
     res.json(false);
   }
   else {
-    res.json(reservations);
+    res.json(reservation);
   }
 });
 
